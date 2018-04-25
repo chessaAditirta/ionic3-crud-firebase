@@ -12,12 +12,12 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyCUSKSDsz8w8ftF082Jm5697Hvz1tZtY2M",
-  authDomain: "ionic-crud-firebase-f601d.firebaseapp.com",
-  databaseURL: "https://ionic-crud-firebase-f601d.firebaseio.com",
-  projectId: "ionic-crud-firebase-f601d",
-  storageBucket: "ionic-crud-firebase-f601d.appspot.com",
-  messagingSenderId: "606364015285"
+  apiKey: "xxxx",
+  authDomain: "xxxx.firebaseapp.com",
+  databaseURL: "https://xxxx.firebaseio.com",
+  projectId: "xxxx",
+  storageBucket: "xxxx.appspot.com",
+  messagingSenderId: "xxxx"
 
 }
 
