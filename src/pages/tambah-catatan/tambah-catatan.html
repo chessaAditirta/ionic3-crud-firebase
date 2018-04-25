@@ -1,0 +1,27 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Tambah Catatan</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12 padding-horizontal>
+                <ion-item class="padding-left-0">
+                    <ion-label stacked>Judul</ion-label>
+                    <ion-input type="text" [(ngModel)]="catatan.judul" class="padding-left-5"></ion-input>
+                </ion-item>
+
+                <ion-item class="padding-left-0">
+                    <ion-label stacked>Konten</ion-label>
+                    <ion-textarea [(ngModel)]="catatan.konten" class="padding-left-5"></ion-textarea>
+                </ion-item>
+                <button ion-button block (click)="simpanCatatan(catatan)" color="secondary">SIMPAN</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

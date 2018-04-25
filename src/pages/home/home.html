@@ -1,14 +1,31 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Catatan
+        </ion-title>
+
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-fab bottom right>
+        <button ion-fab (click)="tambahCatatan()" color="primary"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+
+    <ion-list>
+        <ion-item-divider></ion-item-divider>
+        <ion-item-sliding *ngFor="let catatan of listCatatan | async; let i = index">
+            <ion-item class="padding-left-0">
+                <h2>{{ i + 1 }}. {{ catatan.judul }}</h2>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="danger" (click)="konfirmasiHapus(catatan)" style="padding: 0 10px 0 5px !important " icon-only>
+                    <ion-icon name="trash" ></ion-icon> <span >Hapus</span>
+                </button>
+                <button ion-button color="secondary" (click)="editCatatan({catatan: catatan})" icon-only>
+                    <ion-icon name="create" ></ion-icon> Edit
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
 </ion-content>
